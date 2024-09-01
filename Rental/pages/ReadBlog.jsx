@@ -3,6 +3,6 @@
 
 export function ReadBlog(){
     return<>
-    Home pages
+  ReadBlog
     </>
 }
