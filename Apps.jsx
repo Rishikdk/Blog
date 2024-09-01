@@ -10,7 +10,7 @@ function Apps() {
   //data uplode to the data base
   function makePost(){
     let postObject ={
-      title:"aaaa",
+      title:"aaaa", 
       description:"bbbbb",
       contain:"ccccc",
       dataCreated: new Date()
