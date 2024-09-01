@@ -7,7 +7,7 @@ export async function getPosts(){
     //get data from mongo
     const response = await axios.get(`${URl}/posts`)
 
-    if(response.status===200){
+    if(response.status === 200){
         return response.data
     }else{
         return

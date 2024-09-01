@@ -15,5 +15,5 @@ app.use(posts)
 // creat a server
 app.listen(PORT, ()=>{
     connect.connectToServer()
-    console.log('Server is running on port ${PORT}')
+    console.log(`Server run successfully on Port number ${PORT}`)
 })
