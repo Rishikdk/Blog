@@ -8,10 +8,9 @@ export function Home(){
     useEffect(()=>{
         async function loadAllPost() {
             const data = await getPosts()
+            data.sort((d1,d2)=> new Date(d2.dateCreated).getTime()- new Date(d1.dateCreated).getTime())
             setPosts(data)
-            if(data){
-
-            }    
+  
         }
         loadAllPost()
 

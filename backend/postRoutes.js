@@ -1,5 +1,6 @@
 const express = require("express")
 const database = require("./connect")
+const { ObjectId } = require("mongodb")
 const objectId = require("mongodb").ObjectId
 
 let postRoutes = express.Router()
@@ -16,11 +17,11 @@ postRoutes.route("/posts").get(async (request, response) =>{
         throw new Error("Data was not found :(")
     }
 })
-//#2 - Retrieve one
+//#2 - Retrieve one single data
 //http://localhost:3000/posts/1234
 postRoutes.route("/posts/:id").get(async (request, response) =>{
     let db=database.getDb()
-    let data= await db.collection("posts").findOne({_id: new ObjectID(request.params.id)})
+    let data= await db.collection("posts").findOne({_id: new ObjectId(request.params.id)})
     if(Object.keys(data).length > 0){
         response.json(data)
     }
