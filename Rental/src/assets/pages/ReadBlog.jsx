@@ -1,11 +1,12 @@
 import { BlogCard } from "../Components/Blogcard"
 import{getPost} from "../../api"
-import { useParams } from "react-router-dom"
+import { useParams, useNavigate } from "react-router-dom"
 import { useState,useEffect } from "react"
 
 
 export function ReadBlog(){
 const [post, setPost] = useState({})
+const navigate = useNavigate()
 
   let params = useParams()
   let id=params.id
@@ -14,17 +15,20 @@ const [post, setPost] = useState({})
   useEffect(()=>{
     async function loadPost() {
       let data = await getPost(id)
+      let date = new Date(data.dateCreated)
+      data.dateCreated = date.toString()
       setPost(data)
     }
     loadPost()
 
   },[])
     return<>
+
     <h1>{post.title}</h1>
     <h2>{post.description}</h2>
-    <h3>{post.dateCreated}</h3>
+    <h3>{post.dateCreated?.slice(4,15)}</h3>
     <p>{post.contain}</p>
-
+    <button onClick={()=> navigate(-1)}>Back</button>
 
     </>
 }
