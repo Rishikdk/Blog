@@ -6,38 +6,18 @@ import './App.css'
 
 
 function App() {
-  const [posts, setPosts]= useState()
-  //data uplode to the data base
-  function makePost(){
-    let postObject ={
-      title:"aaaa",
-      description:"bbbbb",
-      contain:"ccccc",
-      dataCreated: new Date()
-    }
-    createPost(postObject)
-  }
-
-  //function to get data from backend
-  // useEffect(()=>{
-  //   async function loadAllPosts() {
-  //     let data = await getPosts()
-  //     if(data){
-  //       setPosts(data)
-  //     }
-  //   }
-  //  loadAllPosts()
-  // }, [])
+  //Pages
+  //Landing pages
+  //Home Pages(filtered by recency)
+  //ReadBlog
+  //Profile
+  //About
+  //Contact
 
 
   return (
     <>
-    {/* {JSON.stringify(posts)} */}
-    
-    <button onClick={makePost}>
-      Create Object
 
-    </button>
     </>
   )
 }
