@@ -2,6 +2,6 @@
 
 export function Landing(){
     return<>
-    Home pages
+ Landing pages
     </>
 }
