@@ -1,7 +1,8 @@
 import { Link } from "react-router-dom"
 import { pageData } from "./pageData"
+import "../Components/component.css"
 export function Navbar(){
-    render(
+    return(
     <div className="navbar">
             {pageData.map((page)=>{
                 return(

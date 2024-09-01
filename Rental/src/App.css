@@ -40,3 +40,21 @@
 .read-the-docs {
   color: #888;
 }
+
+
+/* .navbar{
+  display: flex;
+  position: fixed;
+  width: 100%;
+  justify-content: space-between;
+
+}
+
+.navIcon{
+  display: flex;
+  padding: 4px;
+  margin: 4px;
+  border-radius: 10px;
+  color: aliceblue;
+  border-style: solid;
+} */

@@ -7,7 +7,8 @@ import { Home } from '../pages/Home'
 import { Landing } from '../pages/Landing'
 import { Profile } from '../pages/Profile'
 import { ReadBlog } from '../pages/ReadBlog'
-
+import { Navbar } from './assets/Components/navbar'
+import { Layout } from './assets/Components/Layout'
 
 function App() {
   //Pages
@@ -23,12 +24,14 @@ function App() {
     <Router>
       <Routes>
         <Route path='/' element={<Landing/>}/>
-        <Route path='/home' element={<Home/>}/>
-        <Route path='/createblog' element={<CreateBlog/>}/>
-        <Route path='/readblog' element={<ReadBlog/>}/>
-        <Route path='/profile' element={<Profile/>}/>
-        <Route path='/about' element={<About/>}/>
-        <Route path='/contact' element={<Contact/>}/>
+        <Route element={<Layout/>}>
+          <Route path='/home' element={<Home/>}/>
+          <Route path='/createblog' element={<CreateBlog/>}/>
+          <Route path='/readblog' element={<ReadBlog/>}/>
+          <Route path='/profile' element={<Profile/>}/>
+          <Route path='/about' element={<About/>}/>
+          <Route path='/contact' element={<Contact/>}/>
+        </Route>
       </Routes>
     </Router>
   )

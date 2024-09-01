@@ -5,19 +5,19 @@ export const pageData=[
     },
     {
         name:"Create Blog",
-        path:"/home"
+        path:"/createblog"
     },
     {
         name:"Profile",
-        path:"/home"
+        path:"/profile"
     },
     {
         name:"About US",
-        path:"/home"
+        path:"/about"
     },
     {
         name:"Contact",
-        path:"/home"
+        path:"/contact"
     },
     
     
