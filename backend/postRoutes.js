@@ -35,7 +35,7 @@ postRoutes.route("/posts").post(async (request, response) =>{
         titleL:request.body.title,
         description:request.body.description,
         contain:request.body.contain,
-        dataCreated:request.body.dataCreated
+        dataCreated:request.body.dateCreated
 
     }
     let data= await db.collection("posts").insertOne(mongoObject)
