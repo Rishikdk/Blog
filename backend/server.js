@@ -5,7 +5,7 @@ const cors = require("cors")
 const posts= require("./postRoutes")
 
 const app = express()
-const PORT = 3000
+const PORT = 3000;
 
 //connect frontend and backend
 app.use(cors())
