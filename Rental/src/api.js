@@ -44,3 +44,29 @@ export async function deletePost(id){
     const response = await axios.delete(`${URl}/posts/${id}`)
     return response
 }
+
+
+export async function getUser(id){
+    //"https://localhost:3000/12345"
+    const response = await axios.get(`${URl}/users/${id}`)
+
+    if(response.status === 200){
+        return response.data
+    }else{
+        return
+    }
+
+
+}
+export async function createUser(user){
+    //"https://localhost:3000/users"
+    const response = await axios.post(`${URl}/users`,user)
+    return response
+
+}
+
+export async function updateUser(id,user){
+//"https://localhost:3000/users"
+    const response = await axios.put(`${URl}/users/${id}`,user)
+    return response
+}

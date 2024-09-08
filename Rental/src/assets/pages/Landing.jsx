@@ -1,7 +1,8 @@
-
+import { CreateUser } from "../Components/CreateUser"
 
 export function Landing(){
     return<>
- Landing pages
+
+    <CreateUser/>
     </>
 }

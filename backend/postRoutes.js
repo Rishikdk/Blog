@@ -61,7 +61,7 @@ response.json(data)
 //#5 - Delete One
 postRoutes.route("/posts/:id").delete(async (request, response) =>{
     let db=database.getDb()
-    let data= await db.collection("posts").deleteOne({_id: new ObjectID(request.params.id)})
+    let data= await db.collection("posts").deleteOne({_id: new ObjectId(request.params.id)})
  response.json(data)
 })
 
