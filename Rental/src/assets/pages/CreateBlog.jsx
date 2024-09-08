@@ -4,33 +4,34 @@ import "./pages.css"
 
 
 export function CreateBlog(){
-const [postCreate, setPostCreate] =  useState([])
+const [title, setTitle] =  useState("")
+const [description, setDescription] =  useState("")
+const [content, setContent] =  useState("")
 
-    async function makePost() {
+    async function handleSubmit(){
         let postData={
-            title:"aaaa", 
-            description:"bbbbb",
-            contain:"ccccc",
+            title:title, 
+            description:description,
+            contain:content,
+            author:null,
             dateCreated: new Date()
-    }
-    createPost(postData)
-        
-    }
 
+         }
+         await createPost(postData)
+
+    }
 
     return<>
-    <form>
+    <form onSubmit={handleSubmit}>
         <div className="Containers_create"> 
         <label>Title</label>
-        <input type="text" className="title" placeholder="Enter your Title" />
+        <input name="Title" className="title" placeholder="Enter your Title" onChange={(e) => setTitle(e.target.value)} maxLength={30} required />
         <label>Description</label>
-        <input type="Textarea" placeholder="Enter your Title" />
+        <textarea  name="description" placeholder="Enter your Title" onChange={(e) => setDescription(e.target.value)} maxLength={200}  required/>
         <label>Contain</label>
-        <input type="text" placeholder="Enter your Title" />
-        <label>Date</label>
-        <input type="Date" placeholder="Enter your Title" />
+        <input name="Contain" placeholder="Enter your Title" onChange={(e) => setContent(e.target.value)} maxLength={1000}  required/>
         </div>
-        <button onClick={makePost}>Add</button>   
+        <button type="submit">Add</button>   
 
     </form>
    

@@ -33,10 +33,10 @@ postRoutes.route("/posts/:id").get(async (request, response) =>{
 postRoutes.route("/posts").post(async (request, response) =>{
     let db=database.getDb()
     let mongoObject= {
-        titleL:request.body.title,
+        title:request.body.title,
         description:request.body.description,
         contain:request.body.contain,
-        dataCreated:request.body.dateCreated
+        dateCreated:request.body.dateCreated
 
     }
     let data= await db.collection("posts").insertOne(mongoObject)
@@ -47,10 +47,10 @@ postRoutes.route("/posts/:id").put(async (request, response) =>{
     let db=database.getDb()
     let mongoObject= {
         $set: {
-            titleL:request.body.title,
+            title:request.body.title,
             description:request.body.description,
             contain:request.body.contain,
-            dataCreated:request.body.dataCreated
+            dateCreated:request.body.dataCreated
         }
    
 
