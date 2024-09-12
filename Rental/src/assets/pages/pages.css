@@ -14,3 +14,8 @@
     display: flex;
     width: 250px;
 }
+.Container_blogs{
+    display: flex;
+    background-color: aliceblue;
+    flex-direction: column;
+}

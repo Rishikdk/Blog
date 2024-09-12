@@ -16,12 +16,13 @@ export function CreateUser(){
 
     }
 
-    async function handleSubmit() {
+    async function handleSubmit(e) {
+        e.preventDefault()
         let response = await createUser(user)
-        if (response !== 200){
+        if (response.status !== 200){
             alert("User account could not be created Try another way....!")
         }else{
-            
+
         }
         
     }
@@ -32,7 +33,7 @@ export function CreateUser(){
         <form onSubmit={handleSubmit}>
             <input placeholder="name" onChange={handleChange} name="name" required></input>
             <input placeholder="Email" onChange={handleChange}name="email"required></input>
-            <input placeholder="Password" onChange={handleChange} name="password"required></input>
+            <input type="password" placeholder="Password" onChange={handleChange} name="password"required></input>
         <button type="submit">Create Account</button>
         </form>
     )

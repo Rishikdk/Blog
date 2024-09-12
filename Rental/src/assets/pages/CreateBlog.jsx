@@ -29,7 +29,7 @@ const [content, setContent] =  useState("")
         <label>Description</label>
         <textarea  name="description" placeholder="Enter your Title" onChange={(e) => setDescription(e.target.value)} maxLength={200}  required/>
         <label>Contain</label>
-        <input name="Contain" placeholder="Enter your Title" onChange={(e) => setContent(e.target.value)} maxLength={1000}  required/>
+        <textarea name="Contain" placeholder="Enter your Title" onChange={(e) => setContent(e.target.value)} maxLength={1000}  required/>
         </div>
         <button type="submit">Add</button>   
 
