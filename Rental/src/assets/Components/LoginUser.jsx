@@ -6,9 +6,6 @@ export function LoginUser(){
     const [user, setUser] = useState({
         email:"",
         password:""
-
-
-
     })
     const navigate =useNavigate();
     function handleChange(e){
@@ -21,6 +18,7 @@ export function LoginUser(){
         let response = await verifyUser(user)
         if( response){
        navigate("/home")
+       sessionStorage.setItem("User", response)
     }else{
         alert("Login Failed")
     }
