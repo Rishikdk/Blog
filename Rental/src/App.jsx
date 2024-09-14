@@ -9,8 +9,17 @@ import { Profile } from './assets/pages/Profile'
 import { ReadBlog } from './assets/pages/ReadBlog'
 import { Navbar } from './assets/Components/navbar'
 import { Layout } from './assets/Components/Layout'
+import { useEffect } from 'react'
+import axios from 'axios'
 
 function App() {
+
+  useEffect(()=>{
+    let token = sessionStorage.getItem("User")
+    if(token){
+            axios.defaults.headers.common["Authorization"] = `Bearer ${token}`
+          }
+          },[])
   //Pages
   //Landing pages
   //Home Pages(filtered by recency)
