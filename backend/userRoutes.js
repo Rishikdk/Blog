@@ -96,9 +96,6 @@ if(conformation){
     }else{
         response.json({ success:false, message:"User not Found"})   
      }
-
-
-
 })
 module.exports = userRoutes
 //#
