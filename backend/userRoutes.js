@@ -4,7 +4,7 @@ const { ObjectId } = require("mongodb")
 const objectId = require("mongodb").ObjectId
 const bcrypt = require ("bcrypt")
 const jwt = require("jsonwebtoken")
-require("dotenv").config({path:"./config.env"})
+require("dotenv").config()
 
 let userRoutes = express.Router()
 const SALT_ROUNDS =6

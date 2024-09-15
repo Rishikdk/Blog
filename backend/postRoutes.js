@@ -3,7 +3,7 @@ const database = require("./connect")
 const { ObjectId } = require("mongodb")
 const objectId = require("mongodb").ObjectId
 const jwt = require("jsonwebtoken")
-require("dotenv").config({path:"./config.env"})
+require("dotenv").config()
 
 let postRoutes = express.Router()
 
