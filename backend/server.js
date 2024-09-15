@@ -13,7 +13,9 @@ app.use(cors())
 app.use(express.json())
 app.use(posts)
 app.use(users)
-
+app.get("/",(req,res)=> {
+    res.send("hello")
+})
 
 
 // creat a server
