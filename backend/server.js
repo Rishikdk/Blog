@@ -10,7 +10,7 @@ const PORT = process.env.PORT  || 3000
 
 app.use(cors(
     {
-        origin: ["https://blog-two-xi-54.vercel.app/"],
+        origin: [""],
         methods:["POST","GET"],
         credentials:true
     }
