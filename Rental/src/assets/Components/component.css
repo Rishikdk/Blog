@@ -20,3 +20,8 @@
     color: aliceblue;
     border-style: solid;
 }
+.Container_login{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}

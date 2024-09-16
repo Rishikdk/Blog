@@ -2,6 +2,7 @@ import { verifyUser } from "../../api";
 import { useState } from "react";
 import {useNavigate} from "react-router-dom"
 import axios from "axios";
+import "../Components/component.css"
 
 export function LoginUser(){
     const [user, setUser] = useState({
@@ -28,8 +29,10 @@ export function LoginUser(){
 
 
     return(
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} className="Container_login">
+            <label > Enter Email:</label>
             <input placeholder= "Email" onChange={handleChange} name="email"required></input>
+            <label > Enter Password:</label>
             <input type="password" placeholder="Password" onChange={handleChange} name="password"required></input>
         <button type="submit">Login</button>
         </form>
